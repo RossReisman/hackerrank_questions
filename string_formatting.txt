@@ -1,1 +1,45 @@
 String Formatting
+
+Given an integer, n, print the following values for each integer i from 1 to n:
+
+Decimal
+Octal
+Hexadecimal (capitalized)
+Binary
+Function Description
+
+Complete the print_formatted function in the editor below.
+
+print_formatted has the following parameters:
+
+int number: the maximum value to print
+
+Prints
+
+The four values must be printed on a single line in the order specified
+above for each i from 1 to number. Each value should be space-padded to match
+the width of the binary value of number and the values should be separated
+by a single space.
+
+Input Format
+
+A single integer denoting n.
+
+First Attempt:
+
+def print_formatted(n):
+    for i in range(n):
+        '\n'.join(print(i))
+        bin_num = '\n'.join(ord(n, binary).rjust)
+        hex_num = '\n'.join(hex(int(n)))
+        oct_num = '\n'.join(oct(int(n)))
+
+    print(hex_num, oct_num, bin_num)
+
+
+Solution:
+
+def print_formatted(n):
+    width = len('{0:b}'.format(n))
+    for i in range(1, n+1):
+        print("{0:{width}d} {0:{width}o} {0:{width}X} {0:{width}b}".format(i, width=width))

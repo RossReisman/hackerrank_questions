@@ -14,5 +14,16 @@ bar = '|'
 comma = ','
 
 def create_mat(length, width)
-    for i in range():
-    
+    for i in range(length):
+        print((dash*i).center(length-1))
+    for j in range(width):
+        print((dot*j).center(width-1))
+
+Solution
+
+n, m = map(int, input().split())
+for i in range(1, n, 2):
+    print((i * '.|.').center(m, '-'))
+print('WELCOME'.center(m, '-'))
+for i in range(n-2, -1, -2):
+    print((i * '.|.').center(m, '-'))
