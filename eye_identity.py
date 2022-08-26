@@ -1,0 +1,19 @@
+# First Attempt
+
+import numpy as np
+
+np.set_printoptions(legacy="1.13")
+
+n, m = map(int, input().split())
+print(np.eye(n, m))
+
+# Solution
+
+import numpy as np
+
+np.set_printoptions(legacy="1.13")
+
+n, m = map(int, input().split())
+print(np.eye(n, m))
+
+# Got it right!
